@@ -1,6 +1,6 @@
 
 
-1. Can a user show up more than once in the activity table? Yes or no, and why?(139 users)
+# 1. Can a user show up more than once in the activity table? Yes or no, and why?(139 users)
 ```
 select uid, count(uid)
 from activity
@@ -103,7 +103,7 @@ group by g.group
 
 
 
-1. Write a SQL query that returns: the user ID, the user’s country, the user’s gender, the user’s device type, the user’s test group, whether or not they converted (spent > $0), and how much they spent in total ($0+).
+10. Write a SQL query that returns: the user ID, the user’s country, the user’s gender, the user’s device type, the user’s test group, whether or not they converted (spent > $0), and how much they spent in total ($0+).
 ```
 select u.id, u.country, u.gender, g.device, g.group,
 case when spent>0 then 1 else 0 end as purchased,
