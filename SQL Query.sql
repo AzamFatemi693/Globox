@@ -1,12 +1,12 @@
 
 
 # 1. Can a user show up more than once in the activity table? Yes or no, and why?(139 users)
-```
+
 select uid, count(uid)
 from activity
 group by uid
 having count(uid)>1
-```
+
 
 ```
 select uid, 
@@ -18,7 +18,7 @@ group by uid
 having count(uid)>1
 ```
 
-2. What type of join should we use to join the users table to the activity table?
+# 2. What type of join should we use to join the users table to the activity table?
 ```
 select *
 from users u
@@ -27,33 +27,33 @@ on u.id= a.uid
 order by uid
 ```
 
-3. What SQL function can we use to fill in NULL values? "Coalesce"
+# 3. What SQL function can we use to fill in NULL values? "Coalesce"
 ```
 select *,
 coalesce(device, 'Unknown') as device
 from activity
 ```
 
-4. What are the start and end dates of the experiment?
+# 4. What are the start and end dates of the experiment?
 ```
 select min(join_dt) as min_date, max(join_dt) as max_date
 from groups
 ```
 
-5. How many total users were in the experiment?
+# 5. How many total users were in the experiment?
 ```
 select count(distinct id)
 from users
 ```
 
-6. How many users were in the control and treatment groups?
+# 6. How many users were in the control and treatment groups?
 ```
 select count(g.uid), g.group
 from groups g
 group by g.group
 ```
 
-7. What was the conversion rate of all users?
+# 7. What was the conversion rate of all users?
 ```
 with user_activity as
 (
@@ -67,7 +67,7 @@ select round(((count(uid)*1.0)/count(id))*100,2) as rate
 from user_activity
 ```
 
-8. What is the user conversion rate for the control and treatment groups?
+# 8. What is the user conversion rate for the control and treatment groups?
 ```
 with user_activity as
 (
@@ -84,7 +84,7 @@ left join groups g
 group by g.group
 ```
 
-9. What is the average amount spent per user for the control and treatment groups, including users who did not convert?
+# 9. What is the average amount spent per user for the control and treatment groups, including users who did not convert?
 ```
 with user_activity as
 (
