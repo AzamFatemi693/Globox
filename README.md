@@ -23,5 +23,5 @@ Specializing in sourcing unique and high-quality products from around the world,
 The project included an A/B test to measure the impact of a new feature on Globox's platform. The test utilized two metrics: conversion rate and average user spending.
 
 
-
+## Tables 
 ![schema](Schema.png)
