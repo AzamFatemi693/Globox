@@ -7,13 +7,17 @@ Specializing in sourcing unique and high-quality products from around the world,
 
 ## The A/B test is set up as follows:
 • Theexperimentisexclusivelyconductedonthemobilewebsite.
+
 • When a user visits the GloBox main page, they are randomly
 assigned to either the control or treatment group.
 • Theuser'sjoindateisrecorded.
+
 • If the user is assigned to the treatment group, the page loads the
 banner. If assigned to the control group, the banner is not loaded.
+
 • Subsequently, the user may or may not make purchases on the website. This purchase can occur on the same day they join the
 experiment or days later.
+
 • Anypurchasemadebytheuserisconsidereda"conversion".
 
 ## A/B Test Analysis:
